@@ -10,7 +10,11 @@ document.querySelector('#typeform-get-embed-code').addEventListener('click', fun
     var instapage_elements = instapage_elements_object.allValues();
 
     var typeform_id = document.getElementById('typeform_form_id').value;
-
+    if (typeform_id == '') {
+        alert('A Form ID is required!');
+        return false;
+    }
+    
     var typeform_options_size = document.getElementById('typeform_options_size').value;
     var typeform_options_sharegainstance = document.getElementById('typeform_options_sharegainstance').checked;
     var typeform_options_transitiveSearchParams = document.getElementById('typeform_options_transitiveSearchParams').checked;
