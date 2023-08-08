@@ -19,13 +19,33 @@ input {
     margin: 5px 0;
 }
 
-#typeform-embed-code {
+#typeform-embed-code-area {
     padding: 10px;
     background-color: #000;
-    font-family: "Courier New";
     color: #fff;
+    font-family: "Courier New";
     display: none;
 }
+
 #copy-embed-code {
     display: none;
+}
+
+#autoload-panel {
+    margin-top: 5px;
+    display: none;
+}
+
+.textarea-container {
+    position: relative;
+}
+.textarea-container textarea {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+}
+.textarea-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
