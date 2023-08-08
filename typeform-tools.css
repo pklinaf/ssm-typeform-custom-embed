@@ -1,0 +1,31 @@
+* {
+    font-family: "Arial";
+    font-size: 16px;
+}
+
+.input {
+    background-color: #ecf0f1;
+    color: #16a085;
+    padding: 10px;
+    width: 50%;
+}
+
+input {
+    outline: none;
+    background-color: #ecf0f1;
+    color: #16a085;
+    border: 0;
+    padding: 3px;
+    margin: 5px 0;
+}
+
+#typeform-embed-code {
+    padding: 10px;
+    background-color: #000;
+    font-family: "Courier New";
+    color: #fff;
+    display: none;
+}
+#copy-embed-code {
+    display: none;
+}
