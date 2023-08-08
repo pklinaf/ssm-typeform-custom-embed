@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/insignia/insignia.css">
     <link rel="stylesheet" href="typeform-tools.css">
-    <title>Typeform Tools</title>
+    <title>Typeform - Generate Custom Embed Code by Paul Klinaftakis</title>
 </head>
 <body>
-    <h2>Typeform - Generate Custom Embed Code</h2>
-    <small>Paul Klinaftakis / pklinaf@gmail.com</small><br><br>
+    <h1>Typeform - Generate Custom Embed Code for Popup Form</h1>
+    <small>by Paul Klinaftakis / pklinaf@gmail.com - Last Update: August 8th, 2023</small><br><br>
     <strong>Form ID: (required)</strong><br>
     <div class="input">
         <input type="text" id="typeform_form_id">
@@ -22,15 +22,27 @@
     </div>
     <br>
     <strong>Options:</strong><br>
-    Size in %: <input type="text" id="typeform_options_size"><br>
+    Size in %: <input type="text" id="typeform_options_size"><br><br>
     <input type="checkbox" id="typeform_options_sharegainstance" checked> Share GA Instance<br>
-    <input type="checkbox" id="typeform_options_transitiveSearchParams" checked> Transitive Search Parameters<br>
-    Autoload in seconds: <input type="text" id="typeform_options_autoload"> (leave empty for no autoloading)<br>       
+    <input type="checkbox" id="typeform_options_transitiveSearchParams" checked> Transitive Search Parameters<br><br>
+    Launch Options: <select id="typeform_options_launch_options">
+        <option value="default" selected>Default</option>
+        <option value="page">On Page Load</option>
+        <option value="time">After Time Elapsed</option>
+    </select><br>
+    <div id="autoload-panel" style="padding: 10px; border: 1px #e0e0e0 solid">
+        Set time in seconds: <input type="text" id="typeform_options_launch_options_time"><br>
+    </div>
     <br><br>
-    <button id="typeform-get-embed-code">Get Embed Code</button>
+    <button id="typeform-get-embed-code">Get Embed Code</button> <button id="typeform-reset">Reset</button>
     <br><br>
-    <pre id="typeform-embed-code"></pre>
-    <button id="copy-embed-code">Copy Code to Clipboard</button>
+    <div class="textarea-container">
+        <textarea id="typeform-embed-code-area" readonly></textarea>
+        <button id="copy-embed-code">Copy Code to Clipboard</button>
+    </div>
+
+    
+    
     <script src='dist/insignia/insignia.js'></script>
     <script src="typeform-tools.js"></script>
 </body>
