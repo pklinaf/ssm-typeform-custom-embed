@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/insignia/insignia.css">
     <link rel="stylesheet" href="typeform-tools.css">
     <title>Typeform - Generate Custom Embed Code by Paul Klinaftakis</title>
 </head>
 <body>
     <h1>Typeform - Generate Custom Embed Code for Popup Form</h1>
-    <small>by Paul Klinaftakis / pklinaf@gmail.com - Last Update: August 8th, 2023</small><br><br>
+    <small>by <a href="mailto:pklinaf+typeformtools@gmail.com">Paul Klinaftakis</a> - Last Update: October 6th, 2025</small><br><br>
     <strong>Form ID: (required)</strong><br>
-    <div class="input">
-        <input type="text" id="typeform_form_id">
-    </div>
-    <br>
-    <strong>Instapage Elements: (optional)</strong><br>
+    <input type="text" id="typeform_form_id">
+    <br><br>
+    <strong>Trigger Elements (buttons, links, etc with an id attribute):</strong><br>
     To enter an element, type its id e.g. element-3 and then press space.
-    <div class='input'>
-        <input id='instapage_elements'>
-    </div>
-    <br>
+    <input id="trigger-elements-input" type="text" placeholder="Type element id and press space">
+    <div id="trigger-elements-tags"></div>
+    <br><br>
     <strong>Options:</strong><br>
     Size in %: <input type="text" id="typeform_options_size"><br><br>
     <input type="checkbox" id="typeform_options_sharegainstance" checked> Share GA Instance<br>
-    <input type="checkbox" id="typeform_options_transitiveSearchParams" checked> Transitive Search Parameters<br><br>
-    Launch Options: <select id="typeform_options_launch_options">
+    <input type="checkbox" id="typeform_options_transitiveSearchParams" checked> Transitive Search Parameters
+    <br><br><br>
+    <strong>Hidden Values:</strong><br>
+    <span>Enter name and value, then click "Add".</span>
+    <div id="hidden-values-container">
+        <input type="text" id="hidden-name" placeholder="Name">
+        <input type="text" id="hidden-value" placeholder="Value">
+        <button type="button" id="add-hidden-value">Add</button>
+        <ul id="hidden-values-list"></ul>
+    </div>
+    <br><br>
+    <strong>Launch Options:</strong> <select id="typeform_options_launch_options">
         <option value="default" selected>Default</option>
         <option value="page">On Page Load</option>
         <option value="time">After Time Elapsed</option>
@@ -41,9 +47,6 @@
         <button id="copy-embed-code">Copy Code to Clipboard</button>
     </div>
 
-    
-    
-    <script src='dist/insignia/insignia.js'></script>
     <script src="typeform-tools.js"></script>
 </body>
 </html>
