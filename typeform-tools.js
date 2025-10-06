@@ -83,11 +83,7 @@ function renderTriggerElements() {
     });
 }
 
-var trigger_elements = triggerElements;
-
 document.querySelector('#typeform-get-embed-code').addEventListener('click', function(event) {
-    
-    //var typeform_embed_code = document.querySelector('#typeform-embed-code');
 
     var typeform_id = document.getElementById('typeform_form_id').value;
     if (typeform_id == '') {
@@ -152,8 +148,8 @@ document.querySelector('#typeform-get-embed-code').addEventListener('click', fun
 <script>
   const { open, close, toggle, refresh } = window.tf.createPopup('${typeform_id}', {${typeform_options}})
 `
-    for (var i = 0; i < trigger_elements.length; i++) {
-        var typeform_element_id = trigger_elements[i];
+    for (var i = 0; i < triggerElements.length; i++) {
+        var typeform_element_id = triggerElements[i];
         embed_code += `  document.querySelector('#${typeform_element_id}').onclick = toggle
 `
     }
